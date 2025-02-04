@@ -1,14 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import { useState } from "react";
+// import reactLogo from "./assets/react.svg";
+// import viteLogo from "/vite.svg";
+import { BrowserRouter, defer, Route, Routes } from "react-router-dom";
+import { Main } from "./components";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  //const [count, setCount] = useState(0);
 
   return (
-    <>
-      <div>
+    <BrowserRouter>
+      {/* <Header/> */}
+      <Routes>
+        <Route path="/">
+          <Route index element={<Main />}></Route>
+          {/* <Route path="registrationSuccess" element={<RegistrationSuccess/>}/>
+              <Route path="activate/:uid/:token" element={<SignUpActivation/>}/>
+              <Route path="sign" element={<Sign />}/>
+              <Route path="account" element={<Account />}/>
+              <Route path="books">
+                <Route index element={<Books/>}></Route>
+                <Route path=":id" element={<SelectedBook />}></Route>
+                <Route path="search">
+                  <Route path=":searchValue" element={<SearchResult />}></Route>
+                </Route>
+                <Route path="cart" element={<Cart />}></Route>
+                <Route path="favorites" element={<Favorites />}></Route>
+              </Route> */}
+          <Route path="*" element={<div>Wrong Page</div>}></Route>
+        </Route>
+      </Routes>
+      {/* <Footer/> */}
+      {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -27,9 +49,11 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+      </p> */}
 
-export default App
+      {/* <Loader/> */}
+    </BrowserRouter>
+  );
+};
+
+export { App };

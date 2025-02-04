@@ -1,0 +1,105 @@
+.container-logo {
+  height: 200px;
+  width: 200px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.leaf {
+  width: 15%;
+  height: 30%;
+  background-color: gray;
+  position: absolute;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.leaf-1 {
+  left: 26%;
+  top: 3%;
+  transform: skew(0, 45deg) translate(50%, 0%);
+  opacity: 0;
+  animation: visible1 4s ease-out infinite;
+}
+
+.leaf-2 {
+  left: 51%;
+  top: 3%;
+  transform: skew(0, -45deg) translate(0%, 25%);
+  opacity: 0;
+  animation: visible1 4s linear 0.5s infinite;
+}
+
+.leaf-3 {
+  width: 30%;
+  height: 15%;
+  top: 27%;
+  left: 53%;
+  transform: skew(-45deg, 0) translate(50%, 50%);
+  opacity: 0;
+  animation: visible1 4s linear 1s infinite;
+}
+
+.leaf-4 {
+  width: 30%;
+  height: 15%;
+  top: 52%;
+  left: 53%;
+  transform: skew(45deg, 0) translate(25%, 0%);
+  opacity: 0;
+  animation: visible1 4s linear 1.5s infinite;
+}
+
+.leaf-5 {
+  left: 26%;
+  top: 53%;
+  transform: skew(0, -45deg) translate(50%, 50%);
+  opacity: 0;
+  animation: visible1 4s linear 2.5s infinite;
+}
+
+.leaf-6 {
+  left: 51%;
+  top: 53%;
+  transform: skew(0, 45deg) translate(0%, 25%);
+  opacity: 0;
+  animation: visible1 4s linear 2s infinite;
+}
+
+.leaf-7 {
+  width: 30%;
+  height: 15%;
+  top: 27%;
+  left: 2%;
+  transform: skew(45deg, 0) translate(0%, 50%);
+  opacity: 0;
+  animation: visible1 4s linear 3.5s infinite;
+}
+
+.leaf-8 {
+  width: 30%;
+  height: 15%;
+  top: 52%;
+  left: 2%;
+  transform: skew(-45deg, 0) translate(25%, 0%);
+  opacity: 0;
+  animation: visible1 4s linear 3s infinite;
+}
+
+@keyframes visible1 {
+  0% {
+    opacity: 0;
+  }
+
+  12.5% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
