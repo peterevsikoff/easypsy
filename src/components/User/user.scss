@@ -1,0 +1,26 @@
+@import "../../scss/index.scss";
+
+.user {
+
+    a {
+        margin-right: 12px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -7px;
+            height: 100%;
+            width: 2px;
+            background-color: $white;
+        }
+
+        &:last-child {
+            margin-right: 0;
+            &::after {
+                content: none;
+            }
+        }
+    }
+}

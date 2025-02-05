@@ -1,0 +1,17 @@
+@import "../../scss/index.scss";
+
+footer {
+    margin-top: 12px;
+    text-align: center;
+    color: $white;
+
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
+    // width: 100%;
+    
+
+    .section-tile {
+        border-radius: 16px 16px 0 0;
+    }
+}

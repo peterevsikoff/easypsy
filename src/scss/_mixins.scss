@@ -1,5 +1,43 @@
 @mixin h1 {
-  font-family: "Bebas Neue";
+  //font-family: "Bebas Neue";
   font-weight: 900;
   font-size: 56px;
+  color: $white;
+}
+
+@mixin dfbc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin a {
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover {
+        color: $white-bright;
+        text-shadow: -1px 1px 15px $white-bright;
+    }
+}
+
+@mixin box-shadow($color) {
+    box-shadow: 1px 1px 2px rgba($color, 0.5), -1px 1px 2px rgba($color, 0.5), -1px -1px 3px rgba($color, 0.5);
+}
+
+@mixin button {
+    cursor: pointer;
+    line-height: 1;
+    white-space: nowrap;
+    opacity: .7;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+@mixin button-transparent {
+    border: none;
+    outline: none;
+    background-color: inherit;
 }
